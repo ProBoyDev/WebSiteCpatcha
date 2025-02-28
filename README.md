@@ -190,7 +190,7 @@ For detailed configuration options, refer to the `config.yml` file in the reposi
 ## Contributing
 This plugin is open-source under the GNU General Public License v3.0. We welcome contributions from the community to improve and grow WebsiteCaptcha! You can:
 
-- Report bugs or suggest features via [Issues](https://github.com/Noonenowhoiam/WebsiteCaptcha/issues).
+- Report bugs or suggest features via [Issues](https://github.com/Noonenowhoiam/WebSiteCpatcha/issues).
 - Fork the repository, make enhancements, and submit Pull Requests.
 - Optimize performance, squash bugs, or add new features to enhance its reliability and utility.
 
