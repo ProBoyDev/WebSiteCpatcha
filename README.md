@@ -197,7 +197,7 @@ This plugin is open-source under the GNU General Public License v3.0. We welcome
 Contributions must adhere to the GNU GPL v3.0, ensuring that any modifications remain open-source and freely available. Check out the repository, dive into the code, and help us make WebsiteCaptcha a robust security solution for Minecraft servers!
 
 ## License
-WebsiteCaptcha is licensed under the GNU General Public License v3.0. This license grants you the freedom to use, study, share, and modify the software, provided any derivative works are distributed under the same terms. See the [LICENSE](https://github.com/SalmanDev/WebsiteCaptcha/blob/main/LICENSE) file for the full text.
+WebsiteCaptcha is licensed under the GNU General Public License v3.0. This license grants you the freedom to use, study, share, and modify the software, provided any derivative works are distributed under the same terms. See the [LICENSE](https://github.com/Noonenowhoiam/WebSiteCpatcha/blob/main/LICENSE) file for the full text.
 
 Key aspects of GPL v3.0:
 - **Freedom**: Use, modify, and distribute the plugin freely.
@@ -205,9 +205,9 @@ Key aspects of GPL v3.0:
 - **No Warranty**: The plugin is provided "as is" with no guarantees of fitness or performance.
 
 ## Credits
-- **Author**: SalmanDev (GitHub: [SalmanDev](https://github.com/SalmanDev))
+- **Author**: SalmanDev (GitHub: [SalmanDev](https://github.com/Noonenowhoiam))
 - **Dependencies**:
   - ProtocolLib by dmulloy2 and contributors.
 
 ## Support
-Encountered a bug? Have a feature idea? Open an [Issue](https://github.com/SalmanDev/WebsiteCaptcha/issues) on GitHub or join the discussion. Your input is crucial to refining this plugin. Let’s collaborate to secure Minecraft servers worldwide!
+Encountered a bug? Have a feature idea? Open an [Issue](https://github.com/Noonenowhoiam/WebSiteCpatcha/issues) on GitHub or join the discussion. Your input is crucial to refining this plugin. Let’s collaborate to secure Minecraft servers worldwide!
