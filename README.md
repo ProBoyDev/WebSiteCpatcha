@@ -209,5 +209,7 @@ Key aspects of GPL v3.0:
 - **Dependencies**:
   - ProtocolLib by dmulloy2 and contributors.
 
-## Support
-Encountered a bug? Have a feature idea? Open an [Issue](https://github.com/Noonenowhoiam/WebSiteCpatcha/issues) on GitHub or you can join the discussion. And you also can contact me in discord also [Discord id: apgamingboy] Your input is crucial to refining this plugin. Let’s collaborate to secure Minecraft servers worldwide!
+## Contact or Support
+
+-   For issues, queries, or suggestions, please use the project's [GitHub Issues](https://github.com/Noonenowhoiam/WebSiteCpatcha/issues).
+-   For personal queries urgent matters or help you can contact me on Discord: `@apgamingboy`.
