@@ -205,7 +205,7 @@ Key aspects of GPL v3.0:
 - **No Warranty**: The plugin is provided "as is" with no guarantees of fitness or performance.
 
 ## Credits
-- **Author**: SalmanDev (GitHub: [SalmanDev](https://github.com/Noonenowhoiam))
+- **Author**: SalmanDev (GitHub: [Noonenowhoiam](https://github.com/Noonenowhoiam))
 - **Dependencies**:
   - ProtocolLib by dmulloy2 and contributors.
 
