@@ -248,7 +248,7 @@ public class SQLiteManager {
                 stmt.setLong(3, time);
                 stmt.executeUpdate();
                 conn.commit(); // Force commit
-                plugin.getLogger().info("Set player verified status for UUID " + uuid + " to " + verified + " with time " + time);
+//                plugin.getLogger().info("Set player verified status for UUID " + uuid + " to " + verified + " with time " + time);
             } finally {
                 conn.setAutoCommit(true); // Restore auto-commit
             }
@@ -268,7 +268,7 @@ public class SQLiteManager {
                 stmt.setString(1, uuid.toString());
                 try (ResultSet rs = stmt.executeQuery()) {
                     boolean verified = rs.next() && rs.getInt("is_verified") == 1;
-                    plugin.getLogger().info("Checked isPlayerVerified for UUID " + uuid + ": " + verified);
+//                    plugin.getLogger().info("Checked isPlayerVerified for UUID " + uuid + ": " + verified);
                     return verified;
                 }
             }

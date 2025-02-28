@@ -40,9 +40,9 @@ public class VerifyHandler implements HttpHandler {
                 return;
             }
 
-            Main.getInstance().getLogger().info("Processing /verify POST request at " + System.currentTimeMillis());
+//            Main.getInstance().getLogger().info("Processing /verify POST request at " + System.currentTimeMillis());
             String requestBody = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
-            Main.getInstance().getLogger().info("Received /verify POST request body: " + requestBody);
+//            Main.getInstance().getLogger().info("Received /verify POST request body: " + requestBody);
 
             Map<String, String> params = parseFormData(requestBody);
             String uuid = params.get("uuid");
@@ -58,7 +58,7 @@ public class VerifyHandler implements HttpHandler {
                         </body>
                     </html>
                 """;
-                Main.getInstance().getLogger().warning("Invalid request: uuid=" + uuid + ", g-recaptcha-response=" + recaptchaResponse);
+//                Main.getInstance().getLogger().warning("Invalid request: uuid=" + uuid + ", g-recaptcha-response=" + recaptchaResponse);
                 sendHtmlResponse(exchange, 400, errorHtml);
                 return;
             }
@@ -76,7 +76,7 @@ public class VerifyHandler implements HttpHandler {
                         </body>
                     </html>
                 """;
-                Main.getInstance().getLogger().warning("Invalid UUID format: " + uuid);
+//                Main.getInstance().getLogger().warning("Invalid UUID format: " + uuid);
                 sendHtmlResponse(exchange, 400, errorHtml);
                 return;
             }
@@ -88,7 +88,7 @@ public class VerifyHandler implements HttpHandler {
                     return;
                 }
                 verificationManager.setPlayerVerified(playerUUID, true);
-                Main.getInstance().getLogger().info("Verification succeeded for UUID: " + uuid);
+//                Main.getInstance().getLogger().info("Verification succeeded for UUID: " + uuid);
 
                 Bukkit.getScheduler().runTaskLater(Main.getInstance(), () -> {
                     Player player = Bukkit.getPlayer(playerUUID);
@@ -104,7 +104,7 @@ public class VerifyHandler implements HttpHandler {
 
                         Integer taskId = verificationManager.getVerificationTask(playerUUID);
                         if (taskId != null) {
-                            Main.getInstance().getLogger().info("Cancelling task " + taskId + " for UUID " + playerUUID + " after verification.");
+//                            Main.getInstance().getLogger().info("Cancelling task " + taskId + " for UUID " + playerUUID + " after verification.");
                             Bukkit.getScheduler().cancelTask(taskId);
                             verificationManager.removeVerificationTask(playerUUID);
                         }
@@ -186,7 +186,7 @@ public class VerifyHandler implements HttpHandler {
             String response = scanner.useDelimiter("\\A").next();
             scanner.close();
 
-            Main.getInstance().getLogger().info("reCAPTCHA verification response: " + response);
+//            Main.getInstance().getLogger().info("reCAPTCHA verification response: " + response);
             return response.contains("\"success\": true");
         } catch (Exception e) {
             Main.getInstance().getLogger().severe("Failed to verify CAPTCHA: " + e.getMessage());
@@ -214,7 +214,7 @@ public class VerifyHandler implements HttpHandler {
 
     private void sendHtmlResponse(HttpExchange exchange, int statusCode, String html) {
         try {
-            Main.getInstance().getLogger().info("Attempting to send response with status " + statusCode + " at " + System.currentTimeMillis());
+//            Main.getInstance().getLogger().info("Attempting to send response with status " + statusCode + " at " + System.currentTimeMillis());
             exchange.getResponseHeaders().set("Content-Type", "text/html; charset=UTF-8");
             exchange.getResponseHeaders().set("Cache-Control", "no-cache, no-store, must-revalidate");
             exchange.getResponseHeaders().set("Pragma", "no-cache");
@@ -231,7 +231,7 @@ public class VerifyHandler implements HttpHandler {
             try (OutputStream os = exchange.getResponseBody()) {
                 os.write(responseBytes);
                 os.flush();
-                Main.getInstance().getLogger().info("Response sent with status " + statusCode + " and length " + responseBytes.length + " at " + System.currentTimeMillis());
+//                Main.getInstance().getLogger().info("Response sent with status " + statusCode + " and length " + responseBytes.length + " at " + System.currentTimeMillis());
             }
         } catch (IOException e) {
             Main.getInstance().getLogger().severe("Failed to send response: " + e.getMessage());

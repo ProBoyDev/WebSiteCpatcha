@@ -46,7 +46,7 @@ public class PlayerJoinListener implements Listener {
         String playerVersion = getPlayerVersion(player);
 
         verificationManager.getPlugin().getLogger().info(String.format(
-                "[WebSiteCaptcha]: [/%s|%s|%s] <-> VirtualConnector joined to the filter: The player changed his IP address.",
+                "[WebSiteCaptcha]: [/%s|%s|%s] <-> VirtualConnector joined to the filter",
                 playerIP, playerName, playerVersion
         ));
 //        verificationManager.getPlugin().getLogger().info("PlayerJoinListener started for UUID " + playerUUID + " at " + System.currentTimeMillis() + " on thread " + Thread.currentThread().getName());
@@ -84,7 +84,7 @@ public class PlayerJoinListener implements Listener {
             verificationManager.getPlugin().getLogger().warning("Invalid game_mode '" + gameModeString + "' in config.yml. Defaulting to ADVENTURE.");
         }
         player.setGameMode(gameMode);
-        verificationManager.getPlugin().getLogger().info("Set game mode for UUID " + playerUUID + " to " + gameMode);
+//        verificationManager.getPlugin().getLogger().info("Set game mode for UUID " + playerUUID + " to " + gameMode);
 
         player.setAllowFlight(true);
         if (gameMode == GameMode.CREATIVE || gameMode == GameMode.SPECTATOR || !verificationManager.getPlugin().getConfig().getBoolean("options.prevent_unverified_player_movement", true)) {
@@ -94,7 +94,7 @@ public class PlayerJoinListener implements Listener {
 
         Integer existingTaskId = verificationManager.getVerificationTask(playerUUID);
         if (existingTaskId != null) {
-            verificationManager.getPlugin().getLogger().info("Cancelling existing task " + existingTaskId + " for UUID " + playerUUID);
+//            verificationManager.getPlugin().getLogger().info("Cancelling existing task " + existingTaskId + " for UUID " + playerUUID);
             Bukkit.getScheduler().cancelTask(existingTaskId);
             verificationManager.removeVerificationTask(playerUUID);
         }
@@ -104,19 +104,19 @@ public class PlayerJoinListener implements Listener {
         String subtitleText = formatMessage(verificationManager.getPlugin().getConfig().getString("options.subtitle", "&aThanks for using my plugin"));
         VoidWorldManager.setSendTitle(sendTitle);
         VoidWorldManager.setTitleText(titleText, subtitleText);
-        verificationManager.getPlugin().getLogger().info("Set SendTitle=" + sendTitle + ", title='" + titleText + "', subtitle='" + subtitleText + "' for UUID " + playerUUID);
+//        verificationManager.getPlugin().getLogger().info("Set SendTitle=" + sendTitle + ", title='" + titleText + "', subtitle='" + subtitleText + "' for UUID " + playerUUID);
 
         boolean sendActionBar = verificationManager.getPlugin().getConfig().getBoolean("options.SendActionBar", false);
         String actionBarText = formatMessage(verificationManager.getPlugin().getConfig().getString("options.actionBar", "&ePlease verify to join!"));
         VoidWorldManager.setSendActionBar(sendActionBar);
         VoidWorldManager.setActionBarText(actionBarText);
-        verificationManager.getPlugin().getLogger().info("Set SendActionBar=" + sendActionBar + ", actionBar='" + actionBarText + "' for UUID " + playerUUID);
+//        verificationManager.getPlugin().getLogger().info("Set SendActionBar=" + sendActionBar + ", actionBar='" + actionBarText + "' for UUID " + playerUUID);
 
         boolean sendChatMessage = verificationManager.getPlugin().getConfig().getBoolean("options.SendChatMessage", false);
         String chatMessageText = formatMessage(verificationManager.getPlugin().getConfig().getString("options.chatMessage", "&eClick the link to verify!"));
         VoidWorldManager.setSendChatMessage(sendChatMessage);
         VoidWorldManager.setChatMessageText(chatMessageText);
-        verificationManager.getPlugin().getLogger().info("Set SendChatMessage=" + sendChatMessage + ", chatMessage='" + chatMessageText + "' for UUID " + playerUUID);
+//        verificationManager.getPlugin().getLogger().info("Set SendChatMessage=" + sendChatMessage + ", chatMessage='" + chatMessageText + "' for UUID " + playerUUID);
 
         int port = verificationManager.getPlugin().getConfig().getInt("Web.port", 8080);
         String host = verificationManager.getPlugin().getConfig().getString("Web.host", "localhost");
@@ -134,10 +134,10 @@ public class PlayerJoinListener implements Listener {
         player.spigot().sendMessage(message);
 
         boolean applyBlindness = verificationManager.getPlugin().getConfig().getBoolean("options.apply_blindness", true);
-        verificationManager.getPlugin().getLogger().info("Apply blindness for UUID " + playerUUID + ": " + applyBlindness);
+//        verificationManager.getPlugin().getLogger().info("Apply blindness for UUID " + playerUUID + ": " + applyBlindness);
         if (applyBlindness) {
             player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Integer.MAX_VALUE, 1));
-            verificationManager.getPlugin().getLogger().info("Blindness effect applied to UUID " + playerUUID);
+//            verificationManager.getPlugin().getLogger().info("Blindness effect applied to UUID " + playerUUID);
         }
 
         if (verificationManager.getPlugin().getConfig().getBoolean("options.hide_inventory")) {
@@ -172,7 +172,7 @@ public class PlayerJoinListener implements Listener {
                     player.setExp(0.0f);
                     Integer taskId = verificationManager.getVerificationTask(playerUUID);
                     if (taskId != null) {
-                        verificationManager.getPlugin().getLogger().info("Cancelling task " + taskId + " for UUID " + playerUUID + " after verification.");
+//                        verificationManager.getPlugin().getLogger().info("Cancelling task " + taskId + " for UUID " + playerUUID + " after verification.");
                         Bukkit.getScheduler().cancelTask(taskId);
                         verificationManager.removeVerificationTask(playerUUID);
                     }
