@@ -61,6 +61,7 @@
         </repository>
     </repositories>
     <dependencies>
+        <!-- Spigot Api -->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
@@ -72,35 +73,42 @@
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
             <version>11.0.15</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Jetty Servlet -->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlet</artifactId>
             <version>11.0.15</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Jetty HTTP -->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-http</artifactId>
             <version>11.0.15</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Jetty Util -->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-util</artifactId>
             <version>11.0.15</version>
+            <scope>provided</scope>
         </dependency>
+        <!-- SQLite JDBC -->
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.49.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Protocolib Api -->
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
             <artifactId>ProtocolLib</artifactId>
             <version>5.1.0</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.xerial</groupId>
-            <artifactId>sqlite-jdbc</artifactId>
-            <version>3.49.1.0</version> <!-- Or a newer stable version -->
         </dependency>
     </dependencies>
 </project>
