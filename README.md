@@ -26,7 +26,7 @@ WebsiteCaptcha protects your Minecraft server from unauthorized access by implem
 
 ## Installation
 1. **Dependencies**:
-   - **Bukkit/Spigot**: Compatible with versions 1.20 to 1.21.4.
+   - **Paper/Bukkit/Spigot**: Compatible with versions 1.20 to 1.21.4.
    - **ProtocolLib**: Required for Limbo system and version detection (`getPlayerVersion`).
 2. **Steps**:
    - Download the latest `WebsiteCaptcha.jar` from the [Releases](https://github.com/SalmanDev/WebsiteCaptcha/releases) page.
