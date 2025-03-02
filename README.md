@@ -204,6 +204,11 @@ Key aspects of GPL v3.0:
 - **Copyleft**: Any changes or derived works must remain open-source under GPL v3.0.
 - **No Warranty**: The plugin is provided "as is" with no guarantees of fitness or performance.
 
+## • Downloads
+en:
+[SpigotMc.org](https://www.spigotmc.org/resources/%E2%AD%90webstitecaptcha%E2%AD%90-1-20-1-21-%E2%9A%A1.122954/)
+[Modrinth.com](https://modrinth.com/plugin/websitecaptcha)
+
 ## Credits
 - **Author**: SalmanDev (GitHub: [Noonenowhoiam](https://github.com/Noonenowhoiam))
 - **Dependencies**:
