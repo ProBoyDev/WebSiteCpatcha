@@ -42,6 +42,7 @@ public class Main extends JavaPlugin {
             getLogger().info("Loaded " + customFiles.size() + " custom file(s).");
             for (String fileName : customFiles.keySet()) {
                 getLogger().info("Loaded " + fileName + " file");
+                getLogger().info("Loaded " + fileName + " file");
             }
         }
 
